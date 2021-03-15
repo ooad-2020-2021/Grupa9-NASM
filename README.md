@@ -10,10 +10,10 @@
 # Članovi:
 --------------------
 
-* Nejla Šabotić
-* Adna Salčin
-* Sajra Turko
-* Merisa Pleho
+* [Nejla Šabotić](https://github.com/nsabotic1)
+* [Adna Salčin](https://github.com/asalcin3)
+* [Sajra Turko](https://github.com/sturko1)
+* [Merisa Pleho](https://github.com/mpleho1)
 
 # Opis teme:
 ----------------------
