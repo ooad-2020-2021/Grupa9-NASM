@@ -1,10 +1,10 @@
-###Grupa 9 - NASM
+### Grupa 9 - NASM
 --------------------
 
-#Tema: Vodič za vlasnike pasa (KomPas)
+# Tema: Vodič za vlasnike pasa (KomPas)
 ---------------------
 
-#Članovi:
+# Članovi:
 --------------------
 
 * Nejla Šabotić
@@ -12,7 +12,7 @@
 * Sajra Turko
 * Merisa Pleho
 
-#Opis teme:
+# Opis teme:
 ----------------------
 
 Biti vlasnik kućnog ljubimca je jedna od najljepših odluka, no treba joj pristupiti odgovorno. 
@@ -23,27 +23,27 @@ Da bi briga oko Vašeg psa bila uživanje a ne samo puka obaveza aplikacija "Kom
 Podijelite Vaše iskustvo i uživajte sa drugim ljubiteljima i vlasnicima najboljeg čovjekovog prijatelja - PSA.
 
 
-#Akteri:
+# Akteri:
 -------------------------
 
-*Administrator
-*Neregistrovani korisnik
-*Registrovani korisnik
+* Administrator
+* Neregistrovani korisnik
+* Registrovani korisnik
 
-#Funkcionalnosti:
+# Funkcionalnosti:
 -------------------------
 
-##Administrator:
+## Administrator:
 * održavanje i ažuriranje sistema
 * praćenje i učestvovanje u svim aktivnostima koje su vezane za udomljavanje pasa
 * mogućnost pregleda svih registrovanih korisnika
 * svakodnevno ažuriranje i dodavanje savjeta u sekciji "TIPS"
 
-##Neregistrovani korisnik:
+## Neregistrovani korisnik:
 * mogućnost registracije i kreiranje vlastitog profila (uključujući podatke o psu)
 * pristup forumu za korisnike (bez mogućnosti za učestvovanje u istom - READ-ONLY)
 
-##Registrovani korisnik:
+## Registrovani korisnik:
 * pristupa svom profilu uz mogućnost vršenja odredjenih modifikacija
 * primanje obavijesti i podsjetnika prilikom login-a
 * pristup forumu za korisnike (omogućeno je aktivno učestvovanje)
