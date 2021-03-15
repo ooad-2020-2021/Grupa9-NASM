@@ -2,7 +2,8 @@
 --------------------
 
 # Tema: Vodič za vlasnike pasa (KomPas)
-![NejlaLogo](https://user-images.githubusercontent.com/72942574/111144737-c1986000-8587-11eb-92e4-ece67ca3a9a5.JPG)
+
+![logonovo](https://user-images.githubusercontent.com/72942574/111145308-631fb180-8588-11eb-9f5f-7c5cc28519ed.png)
 
 ---------------------
 
