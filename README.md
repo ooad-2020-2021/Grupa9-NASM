@@ -3,7 +3,7 @@
 
 # Tema: Vodič za vlasnike pasa (KomPas)
 
-![logonovo](https://user-images.githubusercontent.com/72942574/111145308-631fb180-8588-11eb-9f5f-7c5cc28519ed.png)
+![NejlaFinal2](https://user-images.githubusercontent.com/72942574/111203292-1d350e80-85c5-11eb-84b4-cdcd7a6f578c.jpg)
 
 ---------------------
 
