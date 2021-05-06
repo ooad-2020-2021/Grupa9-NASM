@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Kompas\\Kompas\\Kompas.csproj": {}
+    "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Kompas\\Kompas\\Kompas.csproj": {
+    "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Kompas\\Kompas\\Kompas.csproj",
-        "projectName": "Kompas",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Kompas\\Kompas\\Kompas.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj",
+        "projectName": "KomPas",
+        "projectPath": "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Kompas\\Kompas\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,28 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

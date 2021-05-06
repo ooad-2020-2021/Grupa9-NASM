@@ -1,6 +1,6 @@
 using System;
 
-namespace Kompas.Models
+namespace KomPas.Models
 {
     public class ErrorViewModel
     {
