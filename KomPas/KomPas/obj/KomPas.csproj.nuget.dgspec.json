@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj": {}
+    "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj": {
+    "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj",
+        "projectUniqueName": "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj",
         "projectName": "KomPas",
-        "projectPath": "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\KomPas.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\KomPas\\KomPas\\obj\\",
+        "projectPath": "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj",
+        "packagesPath": "C:\\Users\\UserPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UserPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,11 +57,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.1.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.12, )"
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [

@@ -1,4 +1,4 @@
-using KomPas.Data;
+﻿using KomPas.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +34,9 @@ namespace KomPas
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<KomPasContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("KomPasContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
