@@ -18,22 +18,27 @@ namespace KomPas.Models
     [Required]
     public int ID { get; set; }
     [Required]
+    [DisplayName("Name: ")]
     public string Ime { get; set; }
+    
     [Required]
-    public string Prezime { get; set; }
-    [Required]
+    [DisplayName("Gender: ")]
     public Spol Spol { get; set; }
 
     [Required]
+    [DisplayName("Breed: ")]
     public string Rasa { get; set; }
 
     [Required]
+    [DisplayName("Weight: ")]
     public int Tezina { get; set; }
 
     [Required]
+    [DisplayName("Health problem: ")]
     public string ZdravstveniProblem { get; set; }
 
     [Required]
+    [DisplayName("Castrated/Sterilized: ")]
     public Boolean KastriranSterilisan { get; set; }
 
     [Required]

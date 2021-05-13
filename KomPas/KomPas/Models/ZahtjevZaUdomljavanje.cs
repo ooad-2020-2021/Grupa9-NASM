@@ -10,12 +10,15 @@ namespace KomPas.Models
   {
     #region Properties
     [Required]
+    [DisplayName("City: ")]
     public string Grad { get; set; }
     [Required]
+    [DisplayName("Adress: ")]
     public string Adresa { get; set; }
     [Required]
     public Korisnik Korisnik { get; set; }
     [Required]
+    [DisplayName("Dog owner: ")]
     public Boolean ImaPsa { get; set; }
     [Required]
     public Pas IzabraniPas { get; set; }
