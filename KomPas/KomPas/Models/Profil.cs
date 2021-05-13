@@ -9,8 +9,13 @@ namespace KomPas.Models
 {
   public class Profil
   {
+ 
     #region Properties
     [Required]
+    [Key]
+    public int ProfilID { get; set; }
+     [Required]
+
     public Korisnik Korisnik { get; set; }
     [Required]
     public Pas Pas { get; set; }

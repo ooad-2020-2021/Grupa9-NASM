@@ -15,5 +15,21 @@ namespace KomPas.Data
         }
 
         public DbSet<KomPas.Models.Korisnik> Korisnik { get; set; }
+
+        public DbSet<KomPas.Models.ZahtjevZaUdomljavanje> ZahtjevZaUdomljavanje { get; set; }
+
+        public DbSet<KomPas.Models.Profil> Profil { get; set; }
+
+        public DbSet<KomPas.Models.Dokument> Dokument { get; set; }
+
+        public DbSet<KomPas.Models.Forum> Forum { get; set; }
+
+        public DbSet<KomPas.Models.Pas> Pas { get; set; }
+
+        public DbSet<KomPas.Models.Komentar> Komentar { get; set; }
+
+        public DbSet<KomPas.Models.Podsjetnik> Podsjetnik { get; set; }
+
+        public DbSet<KomPas.Models.Post> Post { get; set; }
     }
 }

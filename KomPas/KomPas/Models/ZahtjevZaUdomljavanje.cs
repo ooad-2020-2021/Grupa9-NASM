@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,10 @@ namespace KomPas.Models
   public class ZahtjevZaUdomljavanje
   {
     #region Properties
+
+    [Required]
+    [Key]
+    public int ZahtjevZaUdomljavanjeID { get; set; }
     [Required]
     [DisplayName("City: ")]
     public string Grad { get; set; }

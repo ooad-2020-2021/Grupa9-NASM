@@ -6,6 +6,9 @@ namespace KomPas.Models
 {
   public class Forum
   {
+    [Required]
+    [Key]
+    public int ForumID { get; set; }
     #region Properties
      [Required]
     public int BrojAktivnihKorisnika { get; set; }
