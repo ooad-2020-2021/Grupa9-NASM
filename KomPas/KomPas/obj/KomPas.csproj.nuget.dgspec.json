@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj": {}
+    "C:\\Users\\UserPC\\source\\repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj": {
+    "C:\\Users\\UserPC\\source\\repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj",
+        "projectUniqueName": "C:\\Users\\UserPC\\source\\repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj",
         "projectName": "KomPas",
-        "projectPath": "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj",
+        "projectPath": "C:\\Users\\UserPC\\source\\repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\KomPas.csproj",
         "packagesPath": "C:\\Users\\UserPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UserPC\\Source\\Repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\obj\\",
+        "outputPath": "C:\\Users\\UserPC\\source\\repos\\ooad-2020-2021\\Grupa9-NASM\\KomPas\\KomPas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -68,6 +68,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
             }
           },
           "imports": [

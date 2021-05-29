@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,9 +16,16 @@ namespace KomPas.Data
 
         public DbSet<KomPas.Models.Korisnik> Korisnik { get; set; }
 
-        public DbSet<KomPas.Models.ZahtjevZaUdomljavanje> ZahtjevZaUdomljavanje { get; set; }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
 
-        public DbSet<KomPas.Models.Profil> Profil { get; set; }
+      modelBuilder.Entity<Korisnik>().ToTable("Korisnik");
+    }
+
+    public DbSet<KomPas.Models.ZahtjevZaUdomljavanje> ZahtjevZaUdomljavanje { get; set; }
+ 
+
+    public DbSet<KomPas.Models.Profil> Profil { get; set; }
 
         public DbSet<KomPas.Models.Dokument> Dokument { get; set; }
 
@@ -31,5 +38,8 @@ namespace KomPas.Data
         public DbSet<KomPas.Models.Podsjetnik> Podsjetnik { get; set; }
 
         public DbSet<KomPas.Models.Post> Post { get; set; }
-    }
+    
+ 
+   
+  }
 }

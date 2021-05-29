@@ -1,4 +1,4 @@
-﻿using KomPas.Data;
+using KomPas.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,16 +27,14 @@ namespace KomPas
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+            services.AddDbContext<KomPasContext>(options =>
+                options.UseMySQL(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<KomPasContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.AddDbContext<KomPasContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("KomPasContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
