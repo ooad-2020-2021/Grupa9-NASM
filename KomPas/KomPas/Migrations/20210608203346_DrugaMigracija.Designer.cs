@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KomPas.Migrations
 {
     [DbContext(typeof(KomPasContext))]
-    [Migration("20210529201442_PrvaMigracija")]
-    partial class PrvaMigracija
+    [Migration("20210608203346_DrugaMigracija")]
+    partial class DrugaMigracija
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

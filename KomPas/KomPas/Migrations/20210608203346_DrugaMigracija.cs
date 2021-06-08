@@ -4,7 +4,7 @@ using MySql.Data.EntityFrameworkCore.Metadata;
 
 namespace KomPas.Migrations
 {
-    public partial class PrvaMigracija : Migration
+    public partial class DrugaMigracija : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
