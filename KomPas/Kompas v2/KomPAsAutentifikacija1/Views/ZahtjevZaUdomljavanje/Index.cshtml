@@ -1,0 +1,63 @@
+@model IEnumerable<KomPas.Models.ZahtjevZaUdomljavanje>
+
+@{
+  ViewData["Title"] = "Udomljavanje";
+}
+
+<h1>Zahtjev za udomljavanje</h1>
+
+<style>
+  body{
+    color: black;
+    background-color: burlywood;
+    height: 100%;
+    width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  
+    
+    
+  }
+</style>
+
+
+<p> <a asp-action="Details" style="margin-right:4%; font-size:large">Psi</a>
+  <a asp-action="Create" style="font-size:large">Formular za udomljavanje</a></p>
+
+<p>
+  <iframe style="width:100%" height="500px" src="https://www.youtube.com/embed/3R8VwbAqWxc"></iframe>
+</p>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.Grad)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Adresa)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.ImaPsa)
+        </td>
+        <td>
+          <a asp-action="Edit" asp-route-id="@item.ZahtjevZaUdomljavanjeID">Edit</a> |
+          <a asp-action="Details" asp-route-id="@item.ZahtjevZaUdomljavanjeID">Psi</a> |
+          <a asp-action="Delete" asp-route-id="@item.ZahtjevZaUdomljavanjeID">Delete</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

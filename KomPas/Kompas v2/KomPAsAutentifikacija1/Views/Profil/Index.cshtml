@@ -1,0 +1,51 @@
+@model IEnumerable<KomPas.Models.Profil>
+
+@{
+    ViewData["Title"] = "Profil";
+}
+
+<h1>Profil</h1>
+
+<style>
+  body {
+    color: black;
+    background-color: burlywood;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+</style>
+
+<p>
+  @Html.ActionLink("Napravi profil psa","Create","Pas")
+
+  
+
+</p>
+
+
+
+<p>
+  @Html.ActionLink("Dodaj podsjetnik", "Create", "Podsjetnik")
+  
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProfilID">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.ProfilID">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.ProfilID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

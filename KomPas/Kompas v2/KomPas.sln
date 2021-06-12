@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomPas", "KomPAsAutentifikacija1\KomPas.csproj", "{9BD163FE-DC31-4D2E-B3D7-A91910A397F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BD163FE-DC31-4D2E-B3D7-A91910A397F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD163FE-DC31-4D2E-B3D7-A91910A397F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD163FE-DC31-4D2E-B3D7-A91910A397F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD163FE-DC31-4D2E-B3D7-A91910A397F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D301E7F-F6BF-4F15-B771-A652D38DF0D8}
+	EndGlobalSection
+EndGlobal

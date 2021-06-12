@@ -1,0 +1,73 @@
+@model KomPas.Models.ZahtjevZaUdomljavanje
+
+@{
+  ViewData["Title"] = "Create";
+}
+
+<h1 style="font-size:60px">Udomljavanje psa</h1>
+
+<h4>Samo te nekoliko koraka dijeli od tvog novog najboljeg prijatelja.</h4>
+<h4> Ne čekaj već odmah udomi novog kućnog ljubimca!</h4>
+<hr />
+
+<style>
+  body {
+    color: black;
+    background-image: url('https://wallpaperaccess.com/full/390954.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+</style>
+
+
+
+
+<div class="row">
+  <div class="col-md-4">
+    <form asp-action="Create">
+      <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      <div class="form-group">
+        <label asp-for="Korisnik.Email" class="control-label"></label> <input asp-for="Korisnik.Email" class="form-row" size="50px" />
+
+        <span asp-validation-for="Grad" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label asp-for="Grad" class="control-label"></label>
+        <input asp-for="Grad" class="form-row" size="50px" />
+        <span asp-validation-for="Grad" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label asp-for="Adresa" class="control-label"></label>
+
+        <input asp-for="Adresa" class="form-row" size="50px" />
+        <span asp-validation-for="Adresa" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Broj izabranog psa:</label>
+        <input asp-for="IzabraniPas" class="form-row" size="50px" />
+        <span asp-validation-for="IzabraniPas" class="text-danger"></span>
+      </div>
+      <div class="form-group form-check">
+        <label class="form-row" size="50px">Ima Psa:</label>
+        <input style="padding-left" asp-for="ImaPsa" type="radio" value="1" />Yes
+        <input asp-for="ImaPsa" type="radio" value="0" />No
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div>
+  <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+  @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,42 @@
+@model IEnumerable<KomPas.Models.Forum>
+
+@{
+  ViewData["Title"] = "Forum";
+}
+
+<h1>Forum</h1>
+
+<style>
+body { color: black; background-image: url('https://i.pinimg.com/originals/56/ea/77/56ea7783b6f967edc28972704987ab10.jpg'); height: 100%; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; opacity: 1; }
+</style>
+
+
+
+<p>
+  <a asp-action="Create">Dodaj Post</a>
+</p> <p><a asp-action="Delete">Izbrisi post</a></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        @Html.DisplayNameFor(model => model.BrojAktivnihKorisnika)
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.BrojAktivnihKorisnika)
+        </td>
+        <td>
+          <a asp-action="Edit" asp-route-id="@item.ForumID">Edit</a> |
+          <a asp-action="Details" asp-route-id="@item.ForumID">Details</a> |
+          <a asp-action="Delete" asp-route-id="@item.ForumID">Delete</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
