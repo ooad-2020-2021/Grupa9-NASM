@@ -26,13 +26,13 @@
         <input asp-for="Ime" class="form-control" />
         <span asp-validation-for="Ime" class="text-danger"></span>
       </div>
-      
-      <div class="form-group">
-    <label asp-for="Spol" class="control-label"></label>
-    <input asp-for="Spol" class="form-control"/>
-    <span asp-validation-for="Spol" class="text-danger"></span>
 
-  </div>
+      <div class="form-group">
+        <label asp-for="Spol" class="control-label"></label>
+        <input asp-for="Spol" class="form-control" />
+        <span asp-validation-for="Spol" class="text-danger"></span>
+
+      </div>
 
       <div class="form-group">
         <label asp-for="Rasa" class="control-label"></label>
@@ -52,18 +52,29 @@
       </div>
       <div class="form-group form-check">
         <label class="control-label" style="margin-right:50px">Kastriran/Sterilisan:</label>
-        <input asp-for="KastriranSterilisan" type="radio" value="1" />Yes
-        <input asp-for="KastriranSterilisan" type="radio" value="0" />No
+        <input asp-for="KastriranSterilisan" type="radio" value="True" />Yes
+        <input asp-for="KastriranSterilisan" type="radio" value="False" />No
 
 
       </div>
+
+      <div class="form-group form-check">
+        <label class="control-label" style="margin-right:50px">Pas za udomljavanje:</label>
+        <input asp-for="DatiNaUdomljavanje" type="radio" value="True" />Yes
+        <input asp-for="DatiNaUdomljavanje" type="radio" value="False" />No
+
+
+      </div>
+
+      <label class="control-label" style="margin-right:50px">Slika:</label>
+      <div action="/action_page.php">
+        <input asp-for="Slika" type="file">
+      </div>
+
+
+
       <div class="form-group">
-    <label asp-for="Slika" class="control-label"></label>
-    <input asp-for="Slika" class="form-control" />
-    <span asp-validation-for="Slika" class="text-danger"></span>
-  </div>
-      <div class="form-group">
-        <!-- <input type="submit" value="Create" class="btn btn-primary" /> --> @Html.ActionLink("SUBMIT", "Index", "Pas")
+        <input type="submit" value="Create" class="btn btn-primary" />
       </div>
     </form>
   </div>

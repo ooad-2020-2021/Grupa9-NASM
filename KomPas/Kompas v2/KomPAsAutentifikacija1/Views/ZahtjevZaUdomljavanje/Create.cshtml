@@ -31,9 +31,9 @@
     <form asp-action="Create">
       <div asp-validation-summary="ModelOnly" class="text-danger"></div>
       <div class="form-group">
-        <label asp-for="Korisnik.Email" class="control-label"></label> <input asp-for="Korisnik.Email" class="form-row" size="50px" />
-
-        <span asp-validation-for="Grad" class="text-danger"></span>
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-row" size="50px" />
+        <span asp-validation-for="Email" class="text-danger"></span>
       </div>
       <div class="form-group">
         <label asp-for="Grad" class="control-label"></label>
@@ -42,7 +42,6 @@
       </div>
       <div class="form-group">
         <label asp-for="Adresa" class="control-label"></label>
-
         <input asp-for="Adresa" class="form-row" size="50px" />
         <span asp-validation-for="Adresa" class="text-danger"></span>
       </div>
@@ -54,8 +53,8 @@
       </div>
       <div class="form-group form-check">
         <label class="form-row" size="50px">Ima Psa:</label>
-        <input style="padding-left" asp-for="ImaPsa" type="radio" value="1" />Yes
-        <input asp-for="ImaPsa" type="radio" value="0" />No
+        <input style="padding-left" asp-for="ImaPsa" type="radio" value="true" />Yes
+        <input asp-for="ImaPsa" type="radio" value="false" />No
       </div>
       <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />

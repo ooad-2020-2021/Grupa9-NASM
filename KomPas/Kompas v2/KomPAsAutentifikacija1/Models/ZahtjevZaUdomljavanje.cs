@@ -21,14 +21,14 @@ namespace KomPas.Models
     [DisplayName("Adresa: ")]
     public string Adresa { get; set; }
     [Required]
-    public Korisnik Korisnik { get; set; }
+    public string Email { get; set; }
     [Required]
     [DisplayName("Već imate psa: ")]
 
     public Boolean ImaPsa { get; set; }
     [Required]
     [DisplayName("Broj izabranog psa: ")]
-    public Pas IzabraniPas { get; set; }
+    public int IzabraniPas { get; set; }
       #endregion
 
     #region Konstruktori

@@ -1,40 +1,68 @@
-@model KomPas.Models.ZahtjevZaUdomljavanje
+@model List<KomPas.Models.Pas>
+
 
 @{
-    ViewData["Title"] = "Psi";
+  ViewData["Title"] = "Psi";
 }
 
 <h1>Psi</h1>
 
 <div>
-  <h4>ZahtjevZaUdomljavanje</h4>
+  <h4>Psi za udomljavanje</h4>
   <hr />
-
-  <dl class="row">
-    <dt class="col-sm-2">
-      @Html.DisplayNameFor(model => model.Grad)
-      
-    </dt>
-    <dd class="col-sm-10">
-      @Html.DisplayFor(model => model.Grad)
-    </dd>
-    <dt class="col-sm-2">
-      @Html.DisplayNameFor(model => model.Adresa)
-    </dt>
-    <dd class="col-sm-10">
-      @Html.DisplayFor(model => model.Adresa)
-    </dd>
-    <dt class="col-sm-2">
-      @Html.DisplayNameFor(model => model.ImaPsa)
-    </dt>
-    <dd class="col-sm-10">
-      @Html.DisplayFor(model => model.ImaPsa)
-    </dd>
-  </dl>
 </div>
+
+<style>
+  body {
+    color: black;
+    background-color: burlywood;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+</style>
+
+
+<head>
+  <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  @foreach (var item in Model)
+  {
+    <div class="gallery">
+      <img src="../Images/@item.Slika" alt="Nema slike" width="600" height="400">
+      <div class="desc">Broj psa: @item.ID. <br /> Osnovne informacije: @item.Ime, @item.Rasa, @item.Tezina kg </div>
+    </div>
+  }
+
+
+</body>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ZahtjevZaUdomljavanjeID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+  <a asp-action="Index">Back to List</a>
 </div>
 
 

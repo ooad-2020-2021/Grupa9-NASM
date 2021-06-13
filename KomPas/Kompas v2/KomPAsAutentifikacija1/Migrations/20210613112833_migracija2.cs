@@ -4,7 +4,7 @@ using MySql.Data.EntityFrameworkCore.Metadata;
 
 namespace KomPas.Migrations
 {
-    public partial class prava : Migration
+    public partial class migracija2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -80,12 +80,13 @@ namespace KomPas.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Ime = table.Column<string>(nullable: false),
-                    Spol = table.Column<int>(nullable: false),
+                    Spol = table.Column<string>(nullable: false),
                     Rasa = table.Column<string>(nullable: false),
                     Tezina = table.Column<int>(nullable: false),
                     ZdravstveniProblem = table.Column<string>(nullable: false),
                     KastriranSterilisan = table.Column<bool>(nullable: false),
-                    Slika = table.Column<string>(nullable: false)
+                    Slika = table.Column<string>(nullable: false),
+                    DatiNaUdomljavanje = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,6 +105,23 @@ namespace KomPas.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Podsjetnik", x => x.PodsjetnikID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ZahtjevZaUdomljavanje",
+                columns: table => new
+                {
+                    ZahtjevZaUdomljavanjeID = table.Column<int>(nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Grad = table.Column<string>(nullable: false),
+                    Adresa = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    ImaPsa = table.Column<bool>(nullable: false),
+                    IzabraniPas = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ZahtjevZaUdomljavanje", x => x.ZahtjevZaUdomljavanjeID);
                 });
 
             migrationBuilder.CreateTable(
@@ -319,35 +337,6 @@ namespace KomPas.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "ZahtjevZaUdomljavanje",
-                columns: table => new
-                {
-                    ZahtjevZaUdomljavanjeID = table.Column<int>(nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Grad = table.Column<string>(nullable: false),
-                    Adresa = table.Column<string>(nullable: false),
-                    KorisnikID = table.Column<int>(nullable: false),
-                    ImaPsa = table.Column<bool>(nullable: false),
-                    IzabraniPasID = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ZahtjevZaUdomljavanje", x => x.ZahtjevZaUdomljavanjeID);
-                    table.ForeignKey(
-                        name: "FK_ZahtjevZaUdomljavanje_Pas_IzabraniPasID",
-                        column: x => x.IzabraniPasID,
-                        principalTable: "Pas",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ZahtjevZaUdomljavanje_Korisnik_KorisnikID",
-                        column: x => x.KorisnikID,
-                        principalTable: "Korisnik",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -419,16 +408,6 @@ namespace KomPas.Migrations
                 name: "IX_Profil_PasID",
                 table: "Profil",
                 column: "PasID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ZahtjevZaUdomljavanje_IzabraniPasID",
-                table: "ZahtjevZaUdomljavanje",
-                column: "IzabraniPasID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ZahtjevZaUdomljavanje_KorisnikID",
-                table: "ZahtjevZaUdomljavanje",
-                column: "KorisnikID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

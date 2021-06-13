@@ -53,7 +53,7 @@ namespace KomPas.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Ime,Spol,Rasa,Tezina,ZdravstveniProblem,KastriranSterilisan,Slika")] Pas pas)
+        public async Task<IActionResult> Create([Bind("ID,Ime,Spol,Rasa,Tezina,ZdravstveniProblem,KastriranSterilisan,Slika,DatiNaUdomljavanje")] Pas pas)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace KomPas.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Ime,Spol,Rasa,Tezina,ZdravstveniProblem,KastriranSterilisan,Slika")] Pas pas)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Ime,Rasa,Tezina,ZdravstveniProblem,KastriranSterilisan,Slika,DatiNaUdomljavanje")] Pas pas)
         {
             if (id != pas.ID)
             {

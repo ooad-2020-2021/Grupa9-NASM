@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KomPas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210609124211_prava")]
-    partial class prava
+    [Migration("20210613112833_migracija2")]
+    partial class migracija2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -118,6 +118,9 @@ namespace KomPas.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<bool>("DatiNaUdomljavanje")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasColumnType("text");
@@ -133,8 +136,9 @@ namespace KomPas.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Spol")
-                        .HasColumnType("int");
+                    b.Property<string>("Spol")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("Tezina")
                         .HasColumnType("int");
@@ -228,6 +232,10 @@ namespace KomPas.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Grad")
                         .IsRequired()
                         .HasColumnType("text");
@@ -235,17 +243,10 @@ namespace KomPas.Migrations
                     b.Property<bool>("ImaPsa")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("IzabraniPasID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("KorisnikID")
+                    b.Property<int>("IzabraniPas")
                         .HasColumnType("int");
 
                     b.HasKey("ZahtjevZaUdomljavanjeID");
-
-                    b.HasIndex("IzabraniPasID");
-
-                    b.HasIndex("KorisnikID");
 
                     b.ToTable("ZahtjevZaUdomljavanje");
                 });
@@ -496,21 +497,6 @@ namespace KomPas.Migrations
                     b.HasOne("KomPas.Models.Pas", "Pas")
                         .WithMany()
                         .HasForeignKey("PasID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("KomPas.Models.ZahtjevZaUdomljavanje", b =>
-                {
-                    b.HasOne("KomPas.Models.Pas", "IzabraniPas")
-                        .WithMany()
-                        .HasForeignKey("IzabraniPasID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KomPas.Models.Korisnik", "Korisnik")
-                        .WithMany()
-                        .HasForeignKey("KorisnikID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

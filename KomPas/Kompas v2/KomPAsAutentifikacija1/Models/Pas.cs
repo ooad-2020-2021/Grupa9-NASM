@@ -42,6 +42,12 @@ namespace KomPas.Models
     [Required]
     public string Slika { get; set; }
 
+    [Required]
+    [DisplayName("Da li je pas za udomljavanje: ")]
+    public Boolean DatiNaUdomljavanje { get; set; }
+
+
+
 
     #endregion
 

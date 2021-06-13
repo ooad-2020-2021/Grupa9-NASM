@@ -29,21 +29,14 @@ namespace KomPas.Controllers
 
         // GET: ZahtjevZaUdomljavanje/Details/5
         [Authorize]
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var zahtjevZaUdomljavanje = await _context.ZahtjevZaUdomljavanje
-                .FirstOrDefaultAsync(m => m.ZahtjevZaUdomljavanjeID == id);
-            if (zahtjevZaUdomljavanje == null)
-            {
-                return NotFound();
-            }
-
-            return View();
+            
+            var psi = await _context.Pas
+                .Where(p => p.DatiNaUdomljavanje == true)
+                .ToListAsync();
+            
+            return View(psi);
         }
 
         // GET: ZahtjevZaUdomljavanje/Create
@@ -57,7 +50,7 @@ namespace KomPas.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ZahtjevZaUdomljavanjeID,Grad,Adresa,ImaPsa")] ZahtjevZaUdomljavanje zahtjevZaUdomljavanje)
+        public async Task<IActionResult> Create([Bind("ZahtjevZaUdomljavanjeID,Email,Grad,Adresa,ImaPsa,IzabraniPas")] ZahtjevZaUdomljavanje zahtjevZaUdomljavanje)
         {
             if (ModelState.IsValid)
             {

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\KomPas"
+    "\\KomPas",
+    "\\KomPas\\KomPas"
   ],
-  "SelectedNode": "\\KomPas",
+  "SelectedNode": "\\KomPas\\KomPas\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

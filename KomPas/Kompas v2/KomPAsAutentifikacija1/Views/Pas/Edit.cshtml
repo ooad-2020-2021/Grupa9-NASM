@@ -1,4 +1,4 @@
-﻿@model KomPas.Models.Pas
+@model KomPas.Models.Pas
 
 @{
     ViewData["Title"] = "Edit";
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Spol" class="control-label"></label>
-                <select asp-for="Spol" class="form-control"></select>
+                <input asp-for="Spol" class="form-control"/>
                 <span asp-validation-for="Spol" class="text-danger"></span>
             </div>
             <div class="form-group">
